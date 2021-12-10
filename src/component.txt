@@ -1,7 +1,18 @@
 COMPONENT FOR ALL PAGES HERE
+<<<<<<< HEAD
 thuy
 thuy
 thuy
 thuy
 thuy
+=======
+
+- TEst 
+teset 
+atfgwhf ks 
+ahuawef
+
+
+
+>>>>>>> main
 COMPONENT FOR ...
