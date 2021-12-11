@@ -1,0 +1,38 @@
+-ComponentHeader
+	+HeaderTop
+	+HeaderMain
+	+HeaderBottom
+-ComponentNamePage
+-ComponentWrapProduct
+-ComponentButton
+	+MoreGray
+	+ReadRecepies
+	+BuyNow
+	+ProductDetail
+	+AddWishList
+	+ShowMoreProduct
+	+NextPage
+	+Apply
+	+Quantity
+	+Subscribe
+	+TagItem
+-ComponentCard
+-ComponentCardTag
+-ComponentSlideCard
+-ComponentBlog
+-ComponentStar
+-ComponentWrapChoose
+	+Categories
+	+Brand
+	+Rating
+	+Price
+-ComponentFilter
+	+FilterRadio
+	+FilterCheckbox
+	+FilterDropdown
+-ComponentDisplayList
+-ComponentItemCart
+-ComponentFooter
+	
+
+
