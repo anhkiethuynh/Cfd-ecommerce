@@ -1,5 +1,104 @@
-@mixin useFlex {
+/* Mixin */
+@mixin useCenter($flex: true) {
+	@if ($flex) {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	} @else {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+}
+
+@mixin useFlex($jc: center, $ai: center) {
 	display: flex;
-	justify-content: center;
-	align-items: center;
+	@if ($jc == "spb") {
+		justify-content: space-between;
+	} @else if($jc == "spa") {
+		justify-content: space-around;
+	} @else if($jc == "spe") {
+		justify-content: space-evenly;
+	} @else {
+		justify-content: $jc;
+	}
+	align-items: $ai;
+}
+
+@mixin translate($x: 0%, $y: 0%) {
+	transform: translate($x, $y);
+	// transition: transform $timing;
+}
+
+@mixin scale($scale) {
+	transform: scale($scale);
+}
+
+@mixin setOverflow($line: 1) {
+	display: -webkit-inline-box;
+	-webkit-line-clamp: $line;
+	-webkit-box-orient: vertical;
+	text-overflow: ellipsis;
+	overflow: hidden;
+}
+
+@mixin size($height: 100%, $width: 100%) {
+	height: $height;
+	width: $width;
+}
+
+/* Responsive MOBILE FRIST USING MIN W */
+@mixin media($breakpoint) {
+	@media (min-width: map-get($grid-breakpoints, $breakpoint)) {
+		@content;
+	}
+}
+
+@mixin minWidth($breakpoint) {
+	@media (min-width: $breakpoint) {
+		@content;
+	}
+}
+
+/* Responsive DESKTOP FIRST*/
+
+@mixin mediaMax($breakpoint) {
+	@media (max-width: map-get($grid-breakpoints-max-widths, $breakpoint)) {
+		@content;
+	}
+}
+
+@mixin maxWidth($breakpoints) {
+	@media (max-width: $breakpoint) {
+		@content;
+	}
+}
+
+@mixin fading(
+	$opacity: 0,
+	$pointerEvent: none,
+	$transition: 0,
+	$timingFunction: 0
+) {
+	opacity: $opacity;
+	pointer-events: $pointerEvent;
+	@if ($timingFunction != 0) {
+		transition-timing-function: $timingFunction;
+	}
+	@if ($transition != 0) {
+		transition: opacity $transition;
+	}
+}
+
+@mixin custom-scrollbar {
+	&::-webkit-scrollbar {
+		width: 4px;
+	}
+	&::-webkit-scrollbar-track {
+		background: $black;
+	}
+	&::-webkit-scrollbar-thumb {
+		background: #2b2b2b;
+	}
 }

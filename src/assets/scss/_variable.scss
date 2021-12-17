@@ -1,14 +1,52 @@
-$primary-color: #6a983c;
-$primary-color-dark: #46760a;
-$primary-color-light: #92c064;
+@import "./color";
+/* RESPONSIVE */
+$grid-breakpoints: (
+	// Extra small screen / phone
+	xs: 360px,
+	// Small screen / phone
+	sm: 576px,
+	// Medium screen / tablet
+	md: 768px,
+	// Large screen / desktop
+	lg: 992px,
+	// Extra large screen / wide desktop
+	xl: 1200px,
+	// Extra large screen / wide desktop
+	xxl: 1600px
+);
 
-$bright-color: #f5f5f5;
+$grid-breakpoints-max-widths: (
+	// Extra small screen / phone
+	xs: 359px,
+	// Small screen / phone
+	sm: 575px,
+	// Medium screen / tablet
+	md: 767px,
+	// Large screen / desktop
+	lg: 991px,
+	// Extra large screen / wide desktop
+	xl: 1199px,
+	// Extra large screen / wide desktop
+	xxl: 1599px
+);
 
-$secondary-color: #151515;
-$secondary-color-light: #575757;
-$secondary-color-lighter: #a9a9a9;
+$container-max-widths: (
+	sm: 540px,
+	md: 720px,
+	lg: 960px,
+	xl: 1140px,
+	xxl: 1366px,
+);
 
-/* ? TEXT */
-$text-color: $secondary-color;
+$container-max-width: 1930px;
 
-$white-color: #ffffff;
+:root {
+	/* scss variabale here */
+
+	// --header-height: 60px;
+
+	/* scss variable for >=md */
+	@media (min-width: map-get($grid-breakpoints, "md")) {
+		// --header-height: 90px;
+	}
+}
