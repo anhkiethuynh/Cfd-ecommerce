@@ -1,0 +1,33 @@
+@import "../../assets/css/style.scss";
+.customsay{
+        max-width: 369px;
+        position:relative;
+    &__quote{
+        max-width: 369px;
+    padding: 24px 32px 40px 32px;
+    border-radius: 12px;
+    text-align: center;
+    border:1px solid $gray-quote;
+        .quote{
+            margin-bottom:32px;
+            font-size:15px;
+            font-family: Poppins Medium;
+            font-weight:500px;
+        }
+        .customname{
+            font-size:12px;
+            font-family:Poppins Semi Bold;
+            color:$gray-price
+        }
+
+    }
+    &__img{
+        position:absolute;
+        background:$gray-quote;
+        width:48px; 
+        height:48px;
+    bottom: -20px;
+    left: 40%;
+    border-radius:100%
+    }
+}

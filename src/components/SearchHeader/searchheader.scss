@@ -1,0 +1,29 @@
+@import "../../assets/css/style.scss";
+.research {
+  position: absolute;
+  border-radius: 14px;
+  border: 1px solid #00000040;
+  padding: 10px;
+  display: flex;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  .dropdown {
+    h3 {
+      font-family: Open Sans Bold;
+      font-weight: bold;
+      font-size: 15px;
+      line-height: 22px;
+      padding-right: 10px;
+    }
+    padding-right: 30px;
+    border-right: 1px solid;
+    display: flex;
+    align-items: center;
+  }
+  input {
+    padding-left: 30px;
+    border: none;
+    outline: none;
+  }
+}

@@ -1,0 +1,30 @@
+@import "../../assets/css/style.scss";
+.wraptitleview {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 8px 0px;
+  h3 {
+    font-size: 32px;
+    line-height: 48px;
+  }
+  &__icon {
+    display: flex;
+    p {
+      font-size: 12px;
+      font-family: Open Sans Regular;
+    }
+    .gridview {
+      display: flex;
+      align-items: center;
+    }
+    .listview {
+      display: flex;
+      align-items: center;
+    }
+    .quantityproduct {
+      display: flex;
+      align-items: center;
+    }
+  }
+}

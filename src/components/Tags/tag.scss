@@ -1,0 +1,74 @@
+@import "../../assets/css/style.scss";
+.tag {
+  display: flex;
+
+  &.heighTag {
+    &-small {
+      height: 10px;
+    }
+  }
+  // margin-top: 16px;
+  // margin-bottom: 0px;
+  ol {
+    // display: flex;
+    li {
+      // margin-right: 26px;
+
+      a {
+        text-decoration: none;
+        .btntag {
+          background: $menu-gray;
+          border-radius: 20px;
+          font-weight: 600;
+          font-size: 12px;
+          display: flex;
+          padding: 10px;
+          color: $black-footer;
+          font-family: Poppins Semi Bold;
+          text-transform: capitalize;
+          &.type {
+            &-default {
+            }
+            &-small {
+              font-size: 12px;
+              padding: 2px 5px;
+              color: $green-cl;
+              background: $green-banner;
+            }
+          }
+          &.display {
+            &-default {
+            }
+            &-none {
+              display: none;
+            }
+          }
+          &.color {
+            &-default {
+            }
+            &-black {
+              color: black;
+            }
+          }
+          &.background {
+            &-default {
+            }
+            &-none {
+              background: none;
+              border: 1px solid black;
+            }
+          }
+        }
+      }
+    }
+    .tagmargin {
+      &-default {
+      }
+      &-tagsmall {
+      }
+      &-tagmiddle {
+        margin-right: 16px;
+      }
+    }
+  }
+}

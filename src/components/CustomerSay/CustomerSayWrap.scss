@@ -1,0 +1,19 @@
+@import "../../assets/css/style.scss";
+.CustomerSayWrap {
+  padding: var(--padding) 0px;
+  .title {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    .gotoBog {
+      display: flex;
+      align-items: center;
+      h3 {
+        margin-right: 10px;
+      }
+    }
+  }
+  .wrapquote {
+    display: flex;
+  }
+}

@@ -1,0 +1,26 @@
+@import "../../assets/css/style.scss";
+.wrapcheck {
+  display: flex;
+  align-items: center;
+  &__radio {
+    display: flex;
+    // width: 236px;
+    // height: 42px;
+    justify-content: space-around;
+    border: 1px solid;
+    border-radius: 12px;
+  }
+  &__checkbox {
+    display: flex;
+  }
+}
+.taghistory {
+  display: flex;
+  align-items: center;
+  margin-top: 16px;
+  p {
+    font-size: 12px;
+    font-family: Poppins Semi Bold;
+    color: $gray-price;
+  }
+}

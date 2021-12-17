@@ -1,0 +1,88 @@
+@import "../../assets/css/style.scss";
+@import "../../assets/fonts/stylesheet.css";
+.btnButton {
+  //  border: 2px solid $green-border;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  padding: 12px 16px;
+
+  p {
+    font-size: 15px;
+    font-family: Poppins Bold;
+    font-weight: 700;
+    color: $black-footer;
+    // margin-right: 6px;
+    display: flex;
+    align-items: center;
+    // margin-bottom:0px
+    margin: 0px 6px;
+  }
+  &.color {
+    &-green {
+      background: $green-cl;
+    }
+    &-gray {
+      background: $gray-btnread;
+    }
+    &-none {
+      background: none;
+    }
+  }
+  &.size {
+    &-small {
+      width: 90px;
+      height: 36px;
+      p {
+        color: white;
+      }
+    }
+    &-midlde {
+      width: 84px;
+      height: 48px;
+    }
+    &-large {
+      width: 180px;
+    }
+  }
+  &.type {
+    &-default {
+    }
+    &-icon-left {
+    }
+    &-icon-right {
+      display: flex;
+      align-items: baseline;
+    }
+  }
+  &.padding {
+    &-small {
+      padding: 6px 50px;
+    }
+    &-middle {
+      padding: 6px 50px;
+    }
+  }
+  &.round {
+    border-radius: 12px;
+  }
+  &.colorborder {
+    &-default {
+      border: none;
+    }
+    &-green {
+      border: 2px solid $green-border;
+    }
+    &-boldgreen {
+      border: 2px solid $green-borderbuy;
+    }
+  }
+  &.displayBtn {
+    &-default {
+    }
+    &-none {
+      display: none;
+    }
+  }
+}

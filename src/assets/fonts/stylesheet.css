@@ -1,0 +1,75 @@
+/* @font-face {
+  font-family: "Open Sans";
+  src: url("OpenSans-Light.woff2") format("woff2"),
+    url("OpenSans-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: fallback;
+} */
+@font-face {
+  font-family: "Open Sans Regular";
+  src: url("./opentsans/OpenSans-Regular.woff2") format("woff2"),
+    url("./opentsans/OpenSans-Regular.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: fallback;
+}
+@font-face {
+  font-family: "Open Sans Regular";
+  src: url("./opentsans/OpenSans-Regular.ttf") format("ttf");
+  font-weight: 300;
+  font-style: normal;
+  font-display: fallback;
+}
+@font-face {
+  font-family: "Open Sans Bold";
+  src: url("./opentsans/OpenSans-Bold.woff2") format("woff2"),
+    url("./opentsans/OpenSans-Bold.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: fallback;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("./poppins/Poppins-Light.woff2") format("woff2"),
+    url("./poppins/Poppins-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: fallback;
+}
+
+@font-face {
+  font-family: "Poppins Semi Bold";
+  src: url("./poppins/Poppins-SemiBold.woff2") format("woff2"),
+    url("./poppins/Poppins-SemiBold.woff2") format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: fallback;
+}
+
+@font-face {
+  font-family: "Poppins Bold";
+  src: url("./poppins/Poppins-Bold.ttf") format("ttf");
+  font-weight: 300;
+  font-style: normal;
+  font-display: fallback;
+}
+
+@font-face {
+  font-family: "Poppins Bold";
+  src: url("./poppins/Poppins-Bold.woff2") format("woff2"),
+    url("./poppins/Poppins-Bold.woff2") format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: fallback;
+}
+
+@font-face {
+  font-family: "Poppins Medium";
+  src: url("./poppins/Poppins-Medium.woff2") format("woff2"),
+    url("./poppins/Poppins-Medium.woff2") format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: fallback;
+}

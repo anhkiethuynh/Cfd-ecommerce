@@ -1,0 +1,48 @@
+@import "../../assets/css/style.scss";
+// .banner {
+//     width:420px;
+//         padding: 48px 0px 32px 33px;
+//         background-color:$green-banner;
+//         border-radius:12px;
+//              margin-left:32px;
+//   p {
+//     font-size: 12px;
+//     font-family:Poppins Semi Bold;
+//     color:$green-cl;
+//     margin-bottom:8px;
+//   }
+//   h3{
+//       margin-bottom:94px;
+//   }
+// }
+
+.wrapcontentcard {
+  // margin:54px 0px;
+  display: flex;
+  &__left {
+    width: 269px;
+  }
+}
+
+.homepage {
+  .container-fluid {
+    .category {
+      margin: 64px 0px;
+      display: flex;
+      &__menu {
+        width: 269px;
+        height: 280px;
+      }
+      &__banner {
+        display: flex;
+      }
+    }
+    .saleproduct {
+      // display: flex;
+      margin: 64px 0px;
+    }
+    .farmarproduct {
+      margin: 64px 0px;
+    }
+  }
+}
