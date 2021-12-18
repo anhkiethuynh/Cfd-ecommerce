@@ -1,5 +1,5 @@
 @font-face {
-	font-family: "Poppins";
+	font-family: "ppm";
 	src: url("../../fonts/Poppins-Medium.woff2") format("woff2"),
 		url("../../fonts/Poppins-Medium.woff") format("woff");
 	font-weight: 500;
@@ -8,7 +8,7 @@
 }
 
 @font-face {
-	font-family: "Poppins";
+	font-family: "ppl";
 	src: url("../../fonts/Poppins-Light.woff2") format("woff2"),
 		url("../../fonts/Poppins-Light.woff") format("woff");
 	font-weight: 300;
@@ -17,7 +17,7 @@
 }
 
 @font-face {
-	font-family: "Poppins";
+	font-family: "ppr";
 	src: url("../../fonts/Poppins-Regular.woff2") format("woff2"),
 		url("../../fonts/Poppins-Regular.woff") format("woff");
 	font-weight: normal;
@@ -26,7 +26,7 @@
 }
 
 @font-face {
-	font-family: "Poppins";
+	font-family: "ppb";
 	src: url("../../fonts/Poppins-Bold.woff2") format("woff2"),
 		url("../../fonts/Poppins-Bold.woff") format("woff");
 	font-weight: bold;
@@ -35,10 +35,55 @@
 }
 
 @font-face {
-	font-family: "Poppins";
+	font-family: "ppsm";
 	src: url("../../fonts/Poppins-SemiBold.woff2") format("woff2"),
 		url("../../fonts/Poppins-SemiBold.woff") format("woff");
 	font-weight: 600;
+	font-style: normal;
+	font-display: fallback;
+}
+
+@font-face {
+	font-family: "opsr";
+	src: url("../../fonts/OpenSans-Regular.woff2") format("woff2"),
+		url("../../fonts/OpenSans-Regular.woff") format("woff");
+	font-weight: normal;
+	font-style: normal;
+	font-display: fallback;
+}
+
+@font-face {
+	font-family: "opseb";
+	src: url("../../fonts/OpenSans-ExtraBold.woff2") format("woff2"),
+		url("../../fonts/OpenSans-ExtraBold.woff") format("woff");
+	font-weight: bold;
+	font-style: normal;
+	font-display: fallback;
+}
+
+@font-face {
+	font-family: "opsb";
+	src: url("../../fonts/OpenSans-Bold.woff2") format("woff2"),
+		url("../../fonts/OpenSans-Bold.woff") format("woff");
+	font-weight: bold;
+	font-style: normal;
+	font-display: fallback;
+}
+
+@font-face {
+	font-family: "opssm";
+	src: url("../../fonts/OpenSans-SemiBold.woff2") format("woff2"),
+		url("../../fonts/OpenSans-SemiBold.woff") format("woff");
+	font-weight: 600;
+	font-style: normal;
+	font-display: fallback;
+}
+
+@font-face {
+	font-family: "spsl";
+	src: url("../../fonts/OpenSans-Light.woff2") format("woff2"),
+		url("../../fonts/OpenSans-Light.woff") format("woff");
+	font-weight: 300;
 	font-style: normal;
 	font-display: fallback;
 }
