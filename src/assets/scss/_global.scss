@@ -1,5 +1,14 @@
-button {
+button,
+input,
+select {
 	border: none;
+	background-color: transparent;
+	outline: none;
+	&:focus,
+	&:active {
+		border: none;
+		outline: none;
+	}
 }
 a {
 	color: $text-color;
@@ -8,6 +17,6 @@ a {
 	&:visited,
 	&:focus {
 		text-decoration: none;
-		color: $text-color;
+		// color: $text-color;
 	}
 }

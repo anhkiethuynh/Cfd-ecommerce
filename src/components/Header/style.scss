@@ -1,0 +1,8 @@
+@import "../../assets/scss/style.scss";
+
+.header {
+	&__main {
+		@include useFlex($jc: space-between);
+		height: var(--header-height);
+	}
+}

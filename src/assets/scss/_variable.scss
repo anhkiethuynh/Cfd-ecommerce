@@ -43,10 +43,10 @@ $container-max-width: 1930px;
 :root {
 	/* scss variabale here */
 
-	// --header-height: 60px;
+	--header-height: 60px;
 
 	/* scss variable for >=md */
 	@media (min-width: map-get($grid-breakpoints, "md")) {
-		// --header-height: 90px;
+		--header-height: 130px;
 	}
 }

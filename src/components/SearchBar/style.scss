@@ -1,0 +1,50 @@
+@import "../../assets/scss/style.scss";
+@import "../Input/style";
+.search-header {
+	flex: 1;
+	max-width: 500px;
+	.outer {
+		display: flex;
+		align-items: center;
+		border-radius: 12px;
+		border: 1px solid $secondary-color-lighter;
+		width: 100%;
+	}
+	.search-wrapper {
+		&:last-child {
+			flex: 1;
+		}
+	}
+	.icon-search {
+		cursor: pointer;
+	}
+	.input-wrapper {
+		border: none;
+	}
+	.categories {
+		padding: 0;
+		position: relative;
+		svg {
+			position: absolute;
+			width: 10px;
+			height: 10px;
+			right: calc((28px - 10px) / 2 + 20px);
+		}
+		select {
+			padding: 11px 48px 11px 21px;
+			font-family: ppb;
+			color: $text-color;
+			option {
+				font-family: ppr;
+			}
+		}
+		&::after {
+			content: "";
+			width: 1px;
+			height: 50%;
+			position: absolute;
+			right: 0;
+			background-color: $secondary-color-lighter;
+		}
+	}
+}

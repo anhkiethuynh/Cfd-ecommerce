@@ -1,0 +1,54 @@
+@import "../../assets/scss/style.scss";
+.navigation {
+	background-color: $secondary-color-adddional-light-f9;
+	[class*="-level"] {
+		background-color: $secondary-color-adddional-light-f9;
+	}
+	.menu {
+		&-level-1 {
+			@include useFlex($jc: flex-start);
+			.menu__item {
+				font-family: ppm;
+			}
+		}
+		&:not(.menu-level-1) {
+			display: none;
+		}
+		&__item {
+			display: flex;
+			align-items: center;
+			width: max-content;
+			&:hover {
+				.menu-level-2 {
+					display: block;
+					position: absolute;
+					transform: translate(0, 100%);
+					bottom: 0;
+					.menu__item {
+						position: relative;
+						&:hover {
+							.menu-level-3 {
+								display: block;
+								position: absolute;
+								right: 0;
+								top: 0;
+								transform: translate(100%, 0%);
+							}
+						}
+					}
+				}
+			}
+		}
+		&__link {
+			padding: 16px 20px;
+			svg {
+				width: 10px;
+				height: 10px;
+				margin-left: 8px;
+				path {
+					stroke: $primary-color;
+				}
+			}
+		}
+	}
+}

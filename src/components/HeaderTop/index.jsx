@@ -9,15 +9,35 @@ export default function HeaderTop({ socialInfo, skinnyHeaderLink }) {
 					<div className="outer">
 						<div className="skinny-header__inner">
 							{socialInfo.length &&
-								socialInfo.map((inf) => (
-									<a href={inf.link} className="skinny-header__link">
-										{inf.label}
-									</a>
-								))}
+								socialInfo.map((item, index) => {
+									if (!!item?.link)
+										return (
+											<a
+												key={`key-${index}`}
+												href={item?.link}
+												className="skinny-header__link"
+											>
+												{item?.label}
+											</a>
+										);
+									return (
+										<span key={`key-${index}`} className="skinny-header__text">
+											{item?.label}
+										</span>
+									);
+								})}
 						</div>
 						<div className="skinny-header__inner">
 							{skinnyHeaderLink.length &&
-								skinnyHeaderLink.map((link) => <a href={link}>{link.label}</a>)}
+								skinnyHeaderLink.map((link, index) => (
+									<a
+										key={`key-${index}`}
+										href={link?.link}
+										className="skinny-header__link"
+									>
+										{link.label}
+									</a>
+								))}
 						</div>
 					</div>
 				</div>

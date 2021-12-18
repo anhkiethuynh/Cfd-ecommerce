@@ -4,8 +4,9 @@ import { Outlet } from "react-router-dom";
 export default function MainLayout() {
 	return (
 		<>
-			<div className="menu"></div>
-			<Outlet />
+			<main className="main-layout">
+				<Outlet />
+			</main>
 		</>
 	);
 }

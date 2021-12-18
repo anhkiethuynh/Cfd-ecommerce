@@ -1,0 +1,47 @@
+@import "../../assets/scss/style.scss";
+
+.input {
+	&-group {
+	}
+	&-wrapper {
+		padding: 11px 16px 11px 21px;
+		border: 1px solid $secondary-color-adddional-light-d1;
+		box-sizing: border-box;
+		border-radius: 12px;
+
+		@include useFlex($jc: flex-start);
+		input,
+		select {
+			border: none;
+			outline: none;
+			background-color: transparent;
+			color: $secondary-color-lighter;
+			font: 14px opsr;
+			flex: 1;
+		}
+	}
+	&-icon {
+		&--wrapper {
+			--size: 13px;
+			svg,
+			img {
+				user-select: none;
+				width: var(--size);
+				height: var(--size);
+			}
+		}
+		&-left {
+			img,
+			svg {
+				margin-right: 13px;
+			}
+		}
+		&-right {
+			padding-right: 15px;
+			img,
+			svg {
+				margin-left: 13px;
+			}
+		}
+	}
+}

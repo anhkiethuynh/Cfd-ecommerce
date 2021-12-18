@@ -1,4 +1,3 @@
-import { Button } from "./components/Button";
 import Header from "./components/Header";
 import "./assets/scss/style.scss";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
