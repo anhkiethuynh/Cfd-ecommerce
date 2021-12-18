@@ -1,0 +1,15 @@
+@import "../../assets/scss/mixin";
+
+.skinny-header {
+	.outer {
+		@include useFlex($jc: space-between);
+		border-bottom: 1px solid #151515;
+		// padding: 15px 0;
+	}
+	&__inner {
+		display: flex;
+	}
+	&__link {
+		padding: 15px;
+	}
+}

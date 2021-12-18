@@ -19,7 +19,13 @@ function NavigationMenu({ list }) {
 		);
 	};
 
-	return <nav className="navigation">{renderMenu()}</nav>;
+	return (
+		<nav className="navigation">
+			<div className="container">
+				<div className="outer">{renderMenu()}</div>
+			</div>
+		</nav>
+	);
 }
 
 export default NavigationMenu;

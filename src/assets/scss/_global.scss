@@ -1,3 +1,13 @@
-button{
-    border: none;
+button {
+	border: none;
+}
+a {
+	color: $text-color;
+	text-decoration: none;
+	&:hover,
+	&:visited,
+	&:focus {
+		text-decoration: none;
+		color: $text-color;
+	}
 }

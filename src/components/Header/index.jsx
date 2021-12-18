@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import Logo from "../../assets/img/logo.svg";
-import HeaderTop from "./components/HeaderTop";
+import HeaderTop from "../HeaderTop";
 
 import "./style.scss";
 
@@ -11,7 +11,7 @@ import {
 	menuHeader,
 } from "./mock";
 import SearchBar from "../SearchBar";
-import NavIcon from "./components/NavIcon";
+import NavIcon from "../NavIcon";
 import NavigationMenu from "../NavigationMenu";
 function Header() {
 	return (
