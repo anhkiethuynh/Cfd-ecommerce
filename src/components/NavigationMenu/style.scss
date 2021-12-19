@@ -4,6 +4,9 @@
 	[class*="-level"] {
 		background-color: $secondary-color-adddional-light-f9;
 	}
+	.outer {
+		margin: 0 -16px;
+	}
 	.menu {
 		&-level-1 {
 			@include useFlex($jc: flex-start);

@@ -9,7 +9,6 @@ function NavigationMenu({ list }) {
 			<>
 				<ul className={`menu menu-level-${level}`}>
 					{listMenu.map((menuItem, index) => {
-						console.log({ isMasterLevel, level, listMenu });
 						return (
 							<li className="menu__item" key={`item-${menuItem.slug}`}>
 								<Link to={menuItem.slug} className="menu__link">
