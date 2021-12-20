@@ -1,0 +1,18 @@
+@import "../../assets/scss/_core";
+.list-link {
+	&__headline {
+		font-family: ppsm;
+		font-size: 18px;
+		line-height: 27px;
+		margin-bottom: 10px;
+	}
+	&__item {
+		display: block;
+		padding: 6px 0;
+		color: $primary-color;
+		text-decoration: underline;
+	}
+	.button {
+		margin-top: 45px;
+	}
+}

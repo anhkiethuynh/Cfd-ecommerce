@@ -6,21 +6,21 @@ import "./style.scss";
     icon = { component}
     type = { default, icon-left, icon-right}
 */
-export const Button = ({
+function Button({
 	children,
 	size = "small",
 	color = "colored",
 	type = "default",
 	round = false,
 	icon,
-}) => {
+}) {
 	return (
 		<button
 			className={classNames(
 				"button",
-				`color-${color}`,
-				`size-${size}`,
-				`type-${type}`,
+				`button-${color}`,
+				`button-${size}`,
+				`button-${type}`,
 				{ round }
 			)}
 		>
@@ -29,4 +29,6 @@ export const Button = ({
 			{type === "icon-right" && icon}
 		</button>
 	);
-};
+}
+
+export default Button;

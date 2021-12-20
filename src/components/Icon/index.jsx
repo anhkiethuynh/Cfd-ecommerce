@@ -59,7 +59,7 @@ export const IconLogo = () => {
 	);
 };
 
-export const NarrowIcon = ({ direction = "left", fill = null }) => {
+export const NarrowIcon = ({ direction = "left", fill = "white" }) => {
 	let icon = (
 		<svg
 			width="16"
@@ -70,7 +70,7 @@ export const NarrowIcon = ({ direction = "left", fill = null }) => {
 		>
 			<path
 				d="M9.46609 4.81329L6.72609 7.55329C6.60192 7.6782 6.53223 7.84717 6.53223 8.02329C6.53223 8.19942 6.60192 8.36838 6.72609 8.49329L9.39276 11.16"
-				stroke="white"
+				stroke={fill}
 				strokeWidth="2.5"
 				strokeLinecap="round"
 				strokeLinejoin="bevel"
@@ -88,7 +88,7 @@ export const NarrowIcon = ({ direction = "left", fill = null }) => {
 			>
 				<path
 					d="M6.5332 11.1867L9.2732 8.44669C9.39737 8.32178 9.46706 8.15282 9.46706 7.97669C9.46706 7.80057 9.39737 7.6316 9.2732 7.50669L6.60654 4.84003"
-					stroke="white"
+					stroke={fill}
 					strokeWidth="2.5"
 					strokeLinecap="round"
 					strokeLinejoin="bevel"
@@ -107,7 +107,7 @@ export const NarrowIcon = ({ direction = "left", fill = null }) => {
 			>
 				<path
 					d="M2.0332 1.3335L8.8832 8.1835C9.19547 8.49391 9.61789 8.66815 10.0582 8.66815C10.4985 8.66815 10.9209 8.49391 11.2332 8.1835L17.8999 1.51683"
-					stroke="#151515"
+					stroke={fill}
 					strokeWidth="2.5"
 					strokeLinecap="round"
 					strokeLinejoin="bevel"
