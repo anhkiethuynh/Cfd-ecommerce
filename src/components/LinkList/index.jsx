@@ -1,14 +1,21 @@
 import Button from "components/Button";
 import { NarrowIcon } from "components/Icon";
+import Title from "components/Title";
 import React from "react";
 import { Link } from "react-router-dom";
 import "./style.scss";
 
-function LinkList({ list, headline }) {
+function LinkList({
+	className,
+	list,
+	headline,
+	buttonText = false,
+	onClickButton = () => {},
+}) {
 	return (
 		<>
-			<div className="list-link">
-				{headline && <h3 className="list-link__headline">{headline}</h3>}
+			<div className={`list-link ${className}`}>
+				{headline && <Title className="list-link__headline">{headline}</Title>}
 				{list?.length > 0 &&
 					list?.map((item) => {
 						return (
@@ -17,15 +24,18 @@ function LinkList({ list, headline }) {
 							</Link>
 						);
 					})}
-				<Button
-					color="bright"
-					size="medium"
-					type="icon-right"
-					round
-					icon={<NarrowIcon direction="right" fill="#151515" />}
-				>
-					Button
-				</Button>
+				{buttonText && (
+					<Button
+						color="bright"
+						size="medium"
+						type="icon-right"
+						onClick={onClickButton()}
+						round
+						icon={<NarrowIcon direction="right" fill="#151515" />}
+					>
+						{buttonText}
+					</Button>
+				)}
 			</div>
 		</>
 	);

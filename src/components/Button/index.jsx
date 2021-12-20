@@ -12,6 +12,7 @@ function Button({
 	color = "colored",
 	type = "default",
 	round = false,
+	className = "",
 	icon,
 }) {
 	return (
@@ -21,7 +22,8 @@ function Button({
 				`button-${color}`,
 				`button-${size}`,
 				`button-${type}`,
-				{ round }
+				{ round },
+				className
 			)}
 		>
 			{type === "icon-left" && icon}

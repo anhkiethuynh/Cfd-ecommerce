@@ -1,0 +1,16 @@
+@import "../../assets/scss/_core";
+.sitemap {
+	--columnCount: 4;
+	.inner {
+		@include useFlex($jc: flex-start, $ai: flex-start);
+	}
+	&-column {
+		width: calc(100% / var(--columnCount));
+	}
+	&__links {
+		a {
+			text-decoration: none;
+			padding: 8px 0;
+		}
+	}
+}
