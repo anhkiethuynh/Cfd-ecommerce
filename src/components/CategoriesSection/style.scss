@@ -1,0 +1,20 @@
+@import "../../assets/scss/core";
+.categories-section {
+	padding: 64px 0;
+	.outer {
+		display: flex;
+		--first-colum: 30%;
+	}
+	.list-link {
+		width: var(--first-colum);
+	}
+	.content {
+		display: flex;
+		flex: 1;
+		gap: 30px;
+
+		.basic-banner {
+			flex: 1;
+		}
+	}
+}

@@ -5,7 +5,7 @@ import React from "react";
 import "./style.scss";
 const Footer = () => {
 	return (
-		<footer class="footer">
+		<footer className="footer">
 			<div className="container">
 				<div className="inner">
 					<SiteMap data={FooterSiteMap} />

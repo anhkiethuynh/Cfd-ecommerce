@@ -9,8 +9,8 @@ function SiteMap({ data }) {
 			<Title tag="h2" content="Test" />
 			<div className="inner">
 				{data?.length > 0 &&
-					data.map((item) => (
-						<div className="sitemap-column">
+					data.map((item, index) => (
+						<div className="sitemap-column" key={index}>
 							{item?.dataList?.length > 0 && (
 								<LinkList
 									className="sitemap__links"

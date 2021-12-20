@@ -2,9 +2,10 @@ import BasicBanner from "components/BasicBanner";
 import Button from "components/Button";
 import CategoriesSection from "components/CategoriesSection";
 import { NarrowIcon } from "components/Icon";
-import LinkList from "components/LinkList";
-import React from "react";
+import ProductList from "components/ProductList";
 
+import React from "react";
+import "./style.scss";
 const listLink = [
 	{ label: "Bakery" },
 	{ label: "Fruit and vegetables" },
@@ -47,6 +48,10 @@ function HomePage() {
 					}
 				/>
 			</CategoriesSection>
+			<div className="container">
+				<ProductList />
+				<ProductList direction="vertical" />
+			</div>
 		</div>
 	);
 }

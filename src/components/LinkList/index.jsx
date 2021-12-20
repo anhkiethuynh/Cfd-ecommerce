@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 import "./style.scss";
 
 function LinkList({
-	className,
+	className = "",
 	list,
 	headline,
 	buttonText = false,

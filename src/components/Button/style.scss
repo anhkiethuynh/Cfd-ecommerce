@@ -20,6 +20,16 @@
 
 	display: flex;
 	align-items: center;
+	font-family: ppb;
+	line-height: 22.5px;
+	cursor: pointer;
+
+	&:active,
+	&:focus {
+		background-color: var(--background-color);
+		border: 2px solid var(--border-color);
+		color: var(--text-color);
+	}
 	/* Color */
 	&-colored {
 		--background-color: #{$primary-color};

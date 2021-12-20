@@ -110,3 +110,97 @@ export const productTags = [
 	"Bananas",
 	"Grapes",
 ];
+
+export const getProductList = (count = 10) => {
+	const listProduct = [];
+
+	for (let index = 0; index < count / 2; index++) {
+		const autoId = Math.floor(1000 + Math.random() * 9000);
+		const originalPrice = Math.floor(1000 + Math.random() * 9000);
+		const stock = Math.random(Math.random() * 500);
+		const imgUrl = "https://picsum.photos/400";
+		listProduct.push({
+			autoId,
+			slug: String(`Lorem ipsum dolor sit amet ${autoId}`).split(" ").join("-"),
+			SKU: Math.floor(1000 + Math.random() * 9000),
+			productName: `Lorem ipsum dolor sit amet ${index}`,
+			originalPrice: {
+				formatted: `${originalPrice} USD`,
+				amount: originalPrice,
+			},
+			discountedPrice: {
+				formatted: `0 USD`,
+				amount: 0,
+			},
+			isPromotion: false,
+			productDescription:
+				"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vel quam at arcu porttitor luctus ut quis metus. Aenean pulvinar a est vitae lacinia. Cras sit amet tempus ex. Etiam scelerisque cursus quam, ac porttitor leo dapibus at. Suspendisse potenti. Curabitur vulputate, justo id pharetra rutrum, risus mi faucibus nunc, sit amet pulvinar lorem lorem non massa. Morbi feugiat vel nulla id ullamcorper. Nullam fermentum eu tortor ac laoreet",
+			rating: Math.random(Math.random() * 6),
+			shipping: {
+				isFreeShip: Math.random() < 0.5,
+				shippingFee: {
+					amount: 10,
+					formatted: "10 USD",
+				},
+				deliveryTimeContent: "Delivery in 1 day",
+				deliveryBy: "Europe ",
+			},
+			stock: {
+				isInstock: stock === 0,
+				amount: stock,
+				formatted: `${stock} pcs`,
+			},
+			farm: {
+				name: "Farm name",
+			},
+			fresheness: "New ",
+			imgUrl,
+		});
+	}
+	for (let index = count / 2; index < count; index++) {
+		const originalPrice = Math.floor(1000 + Math.random() * 9000);
+		const stock = Math.random(Math.random() * 500);
+		const autoId = Math.floor(1000 + Math.random() * 9000);
+		const discountedPrice = Math.random(Math.random() * originalPrice);
+		const imgUrl = "https://picsum.photos/400";
+		listProduct.push({
+			autoId,
+			SKU: Math.floor(1000 + Math.random() * 9000),
+			slug: String(`Lorem ipsum dolor sit amet ${autoId}`).split(" ").join("-"),
+			productName: `Lorem ipsum dolor sit amet ${index}`,
+			originalPrice: {
+				formatted: `${originalPrice} USD`,
+				amount: originalPrice,
+			},
+			discountedPrice: {
+				formatted: `${originalPrice - discountedPrice} USD`,
+				amount: originalPrice - discountedPrice,
+			},
+			isPromotion: true,
+			productDescription:
+				"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vel quam at arcu porttitor luctus ut quis metus. Aenean pulvinar a est vitae lacinia. Cras sit amet tempus ex. Etiam scelerisque cursus quam, ac porttitor leo dapibus at. Suspendisse potenti. Curabitur vulputate, justo id pharetra rutrum, risus mi faucibus nunc, sit amet pulvinar lorem lorem non massa. Morbi feugiat vel nulla id ullamcorper. Nullam fermentum eu tortor ac laoreet",
+			rating: Math.random(Math.random() * 6),
+			shipping: {
+				isFreeShip: Math.random() < 0.5,
+				shippingFee: {
+					amount: 10,
+					formatted: "10 USD",
+				},
+				deliveryTimeContent: "Delivery in 1 day",
+				deliveryBy: "Europe ",
+			},
+			stock: {
+				isInstock: !(stock === 0),
+				amount: stock,
+				formatted: `${stock} pcs`,
+			},
+			farm: {
+				name: "Farm name",
+			},
+			fresheness: "New ",
+			imgUrl,
+		});
+	}
+
+	return listProduct;
+};

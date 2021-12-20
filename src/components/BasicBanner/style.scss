@@ -1,0 +1,21 @@
+.basic-banner {
+	padding: 48px 33px 32px;
+	min-height: 280px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	border-radius: 12px;
+	overflow: hidden;
+	&__head {
+		.sub-headline {
+			font-size: 12px;
+			font-family: ppsm;
+			line-height: 18px;
+		}
+		.headline {
+			font-size: 22px;
+			line-height: 33px;
+			font-family: ppsm;
+		}
+	}
+}

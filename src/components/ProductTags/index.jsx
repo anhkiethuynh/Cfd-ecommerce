@@ -8,8 +8,9 @@ function ProductTags({ dataTag, headlines = "Product Tags" }) {
 			<Title className="product-tags__title">{headlines}</Title>
 			<div className="inner">
 				{dataTag?.length > 0 &&
-					dataTag.map((tag) => (
+					dataTag.map((tag, index) => (
 						<Button
+							key={index}
 							className="product-tags__item"
 							color="bright"
 							size="small"
