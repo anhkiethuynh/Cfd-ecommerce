@@ -1,0 +1,11 @@
+@import "assets/scss/_core";
+.testimonial {
+	max-width: 300px;
+	margin: 50px auto;
+
+	border: 1px solid $secondary-color-adddional-light-f1;
+	border-radius: 12px;
+	&__quote {
+		text-align: center;
+	}
+}
