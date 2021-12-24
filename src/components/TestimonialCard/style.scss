@@ -1,11 +1,35 @@
 @import "assets/scss/_core";
 .testimonial {
-	max-width: 300px;
+	// max-width: 470px;
 	margin: 50px auto;
 
 	border: 1px solid $secondary-color-adddional-light-f1;
 	border-radius: 12px;
+	text-align: center;
+	font-family: ppm;
+	padding: 24px 32px 40px;
+	position: relative;
 	&__quote {
-		text-align: center;
+		font-size: 15px;
+		line-height: 22px;
+	}
+	&__author {
+		margin-top: 24px;
+		font-size: 12px;
+		line-height: 18px;
+	}
+	&__image {
+		--sz: 48px;
+		border-radius: 9999px;
+		overflow: hidden;
+		position: absolute;
+		bottom: 0;
+		left: 50%;
+		transform: translate(-50%, 50%);
+		@include size(var(--sz), var(--sz));
+		img {
+			@include size;
+			object-fit: cover;
+		}
 	}
 }

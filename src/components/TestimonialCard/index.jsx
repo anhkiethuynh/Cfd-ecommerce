@@ -6,14 +6,14 @@ const TestimonialCard = ({ data }) => {
 			<div className="inner">
 				<div className="testimonial__quote">
 					<q>
-						This is an super space for your customers qoute. Don’t worry it
+						"This is an super space for your customers qoute. Don’t worry it
 						works smooth as pie. You will get all what you need by writiing a
-						text here.
+						text here."
 					</q>
 				</div>
 				<div className="testimonial__author">Name and Surname</div>
 				<div className="testimonial__image">
-					<img src="https://picsum.photos/30" alt="" />
+					<img src="https://picsum.photos/50" alt="" />
 				</div>
 			</div>
 		</div>
