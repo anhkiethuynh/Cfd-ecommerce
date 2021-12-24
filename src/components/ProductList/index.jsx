@@ -2,7 +2,7 @@ import classNames from "classnames";
 import ProductCard from "components/ProductCard";
 import { getProductList } from "constant/mock";
 import React from "react";
-
+import "./style.scss";
 const listProduct = getProductList(10);
 console.log({ listProduct });
 function ProductList({

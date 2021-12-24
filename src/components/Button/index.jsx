@@ -3,8 +3,8 @@ import "./style.scss";
 /* 
     color = { bright, simple , stroke, colored }
     size = { small, medium, large }
-    icon = { component}
-    type = { default, icon-left, icon-right}
+    icon = { component }
+    type = { default, icon-left, icon-right }
 */
 function Button({
 	children,
@@ -14,6 +14,8 @@ function Button({
 	round = false,
 	className = "",
 	icon,
+	isLoading,
+	...rest
 }) {
 	return (
 		<button
@@ -25,9 +27,11 @@ function Button({
 				{ round },
 				className
 			)}
+			{...rest}
 		>
-			{type === "icon-left" && icon}
-			{children}
+			{type === "icon-left" && !isLoading && icon}
+			{isLoading && "Loading..."}
+			{!isLoading && children}
 			{type === "icon-right" && icon}
 		</button>
 	);

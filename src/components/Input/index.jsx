@@ -1,5 +1,5 @@
 import classNames from "classnames";
-import React, { useState } from "react";
+import React from "react";
 import "./style.scss";
 
 export function InputText({
@@ -9,21 +9,16 @@ export function InputText({
 	type = "textbox",
 	defaultValue = "Default Value",
 	className,
-	onChange,
-	onBlur,
-	label,
 	value,
+	label,
 	id,
+	errorMessage,
+	...rest
 }) {
-	const [text, setText] = useState("");
-	const handleChangeInput = (e) => {
-		console.log(e.currentTarget.value);
-		setText(e.currentTarget.value);
-	};
 	return (
 		<>
 			<div className="input-group">
-				{label && <label for={id}>{label}</label>}
+				{label && <label htmlFor={id}>{label}</label>}
 				<div className="input-wrapper">
 					{iconType === "left" && <i className="input-icon--wrapper">{icon}</i>}
 					<input
@@ -34,21 +29,15 @@ export function InputText({
 							className
 						)}
 						name={id}
-						{...{
-							placeholder,
-							type,
-							onChange,
-							onBlur,
-							id,
-							value,
-						}}
-						value={text || ""}
-						onChange={handleChangeInput}
+						{...rest}
+						{...{ type, id }}
+						value={value || ""}
 					/>
 					{iconType === "right" && (
 						<i className="input-icon--wrapper">{icon}</i>
 					)}
 				</div>
+				{errorMessage && <p className="error-message">{errorMessage || ""}</p>}
 			</div>
 		</>
 	);
@@ -59,20 +48,16 @@ export function DropDownList({
 	label,
 	id,
 	defaultText = "-- Select one --",
-	onChange,
-	onBlur,
 	icon = null,
+	errorMessage,
+	...rest
 }) {
 	return (
 		<>
 			<div className="input-group">
-				{label && <label for={id}>{label}</label>}
+				{label && <label htmlFor={id}>{label}</label>}
 				<div className="input-wrapper">
-					<select
-						name={id}
-						{...{ onChange, onBlur, id }}
-						defaultValue={defaultText}
-					>
+					<select name={id} {...{ id }} {...rest}>
 						<option value="">{defaultText}</option>
 						{list?.length &&
 							list.map((option) => (
@@ -83,6 +68,7 @@ export function DropDownList({
 					</select>
 					<i className="input-icon--wrapper">{icon}</i>
 				</div>
+				{errorMessage && <p className="error-message">{errorMessage || ""}</p>}
 			</div>
 		</>
 	);

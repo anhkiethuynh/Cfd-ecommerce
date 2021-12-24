@@ -158,10 +158,10 @@ export const getProductList = (count = 10) => {
 		});
 	}
 	for (let index = count / 2; index < count; index++) {
-		const originalPrice = Math.floor(1000 + Math.random() * 9000);
+		const originalPrice = Math.floor(1000 + Math.random() * 9000).toFixed();
 		const stock = Math.random(Math.random() * 500);
 		const autoId = Math.floor(1000 + Math.random() * 9000);
-		const discountedPrice = Math.random(Math.random() * originalPrice);
+		const discountedPrice = (Math.random() * originalPrice).toFixed(2);
 		const imgUrl = "https://picsum.photos/400";
 		listProduct.push({
 			autoId,
@@ -173,13 +173,13 @@ export const getProductList = (count = 10) => {
 				amount: originalPrice,
 			},
 			discountedPrice: {
-				formatted: `${originalPrice - discountedPrice} USD`,
-				amount: originalPrice - discountedPrice,
+				formatted: `${(originalPrice - discountedPrice).toFixed(2)} USD`,
+				amount: (originalPrice - discountedPrice).toFixed(2),
 			},
 			isPromotion: true,
 			productDescription:
 				"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vel quam at arcu porttitor luctus ut quis metus. Aenean pulvinar a est vitae lacinia. Cras sit amet tempus ex. Etiam scelerisque cursus quam, ac porttitor leo dapibus at. Suspendisse potenti. Curabitur vulputate, justo id pharetra rutrum, risus mi faucibus nunc, sit amet pulvinar lorem lorem non massa. Morbi feugiat vel nulla id ullamcorper. Nullam fermentum eu tortor ac laoreet",
-			rating: Math.random(Math.random() * 6),
+			rating: Math.round(Math.random() * 6),
 			shipping: {
 				isFreeShip: Math.random() < 0.5,
 				shippingFee: {

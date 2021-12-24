@@ -1,0 +1,20 @@
+form {
+	// display: flex;
+	// justify-content: stretch;
+	// width: 50%;
+}
+.sc-form {
+	min-height: 100vh;
+	padding: 100px 0;
+	.form-tt {
+		margin-bottom: 20px;
+	}
+	label {
+		margin-bottom: 10px;
+		display: block;
+	}
+	.input-group {
+		width: 100%;
+		margin-bottom: 20px;
+	}
+}

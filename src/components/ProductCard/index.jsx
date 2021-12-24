@@ -1,7 +1,7 @@
 import classNames from "classnames";
 import Button from "components/Button";
+import { IconRating } from "components/Icon";
 import { NarrowIcon } from "components/Icon";
-import Title from "components/Title";
 import React from "react";
 import "./style.scss";
 function ProductCard({
@@ -33,7 +33,10 @@ function ProductCard({
 		const productDescription =
 			data?.productDescription || "Product Description";
 		const autoId = data?.autoId;
-
+		const discountPercent = (
+			(data?.discountedPrice?.amount / data?.originalPrice?.amount) *
+			100
+		).toFixed(2);
 		return {
 			isDiscount,
 			discountedPrice,
@@ -49,6 +52,7 @@ function ProductCard({
 			productName,
 			productDescription,
 			autoId,
+			discountPercent,
 		};
 	};
 
@@ -67,32 +71,28 @@ function ProductCard({
 		productName,
 		productDescription,
 		autoId,
+		discountPercent,
 	} = dataMappingFunction(productData);
 
-	const discountPercent = (discountedPrice / originalPrice).toFixed(2) * -100;
+	// s;
 	return (
 		<div
 			className={classNames("product-card", { border }, `product-card-${size}`)}
 		>
 			<div className="product-card__img">
-				<img src={imgUrl} alt={productName} />
 				{isDiscount && <span className="badge">{`${discountPercent} %`}</span>}
+				<img src={imgUrl} alt={productName} />
 			</div>
 			<div className="product-card__content">
 				<div className="product-info">
-					{/* <h3 className="product-title">{productName}</h3> */}
-					<Title className="product-title">{productName}</Title>
-					<p>{productDescription}</p>
+					<h3 className="product-title">{productName}</h3>
+					{/* <Title className="product-title">{productName}</Title> */}
+					<div className="product-description">{productDescription}</div>
 					{showRating && (
 						<div className="product-rating">
-							{[
-								...Array(5).map((_, index) => {
-									if (index < rating) {
-										return index;
-									}
-									return "0";
-								}),
-							]}
+							{[...Array(5)].map((_, index) => {
+								return <IconRating isRated={index < rating} />;
+							})}
 						</div>
 					)}
 					{size === "large" && (
@@ -117,9 +117,13 @@ function ProductCard({
 					)}
 				</div>
 				<div className="product-option">
-					<div className="product-pricing">
-						<div className="pricing-origional">{originalPrice}</div>
-						<div className="pricing-discounted">{discountedPrice}</div>
+					<div className={classNames("product-pricing", { isDiscount })}>
+						<div className={classNames("pricing", { isDiscount })}>
+							{originalPrice}
+						</div>
+						<div className={classNames("pricing")}>
+							{isDiscount && discountedPrice}
+						</div>
 					</div>
 					{size === "large" && (
 						<div className="product-shipping">

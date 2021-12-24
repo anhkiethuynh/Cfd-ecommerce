@@ -1,0 +1,18 @@
+.product-list {
+	&-horizontal {
+		--column: 3;
+		--gap-left: 32px;
+		--gap-bottom: 48px;
+		.inner {
+			display: flex;
+			justify-content: start;
+			flex-wrap: wrap;
+			margin-left: calc(-1 * var(--gap-left));
+		}
+		.product-card {
+			width: calc(100% / var(--column) - var(--gap-left));
+			margin-left: var(--gap-left);
+			margin-bottom: var(--gap-bottom);
+		}
+	}
+}
