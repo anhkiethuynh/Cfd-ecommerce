@@ -8,17 +8,10 @@
 		border-radius: var(--border-radius);
 	}
 	.badge {
-		font-family: ppsm;
-		font-size: 12px;
-		line-height: 18px;
-		color: $primary-color;
-		background-color: $primary-color-additional-light;
 		z-index: 2;
 		position: absolute;
 		top: 12px;
 		left: 12px;
-		border-radius: var(--border-radius);
-		padding: 0 8px;
 	}
 	&__img {
 		overflow: hidden;

@@ -1,4 +1,5 @@
 import BasicBanner from "components/BasicBanner";
+import BlogList from "components/BlogList";
 import Button from "components/Button";
 import CategoriesSection from "components/CategoriesSection";
 import { NarrowIcon } from "components/Icon";
@@ -92,6 +93,11 @@ function HomePage() {
 					<div className="product-list--wrap">
 						<ProductList count={4} productsPerRow={4} />
 					</div>
+				</div>
+			</section>
+			<section className="blogs">
+				<div className="container">
+					<BlogList />
 				</div>
 			</section>
 		</div>

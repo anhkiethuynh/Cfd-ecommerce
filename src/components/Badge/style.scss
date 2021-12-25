@@ -1,0 +1,13 @@
+@import "assets/scss/core";
+.badge {
+	font-family: ppsm;
+	font-size: 12px;
+	line-height: 18px;
+	color: $primary-color;
+	background-color: $primary-color-additional-light;
+	padding: 0 8px;
+	border-radius: var(--border-radius);
+	width: max-content;
+	display: block;
+	border-radius: 12px;
+}

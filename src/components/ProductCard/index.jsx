@@ -1,4 +1,5 @@
 import classNames from "classnames";
+import Badge from "components/Badge";
 import Button from "components/Button";
 import { IconRating } from "components/Icon";
 import { NarrowIcon } from "components/Icon";
@@ -80,7 +81,7 @@ function ProductCard({
 			className={classNames("product-card", { border }, `product-card-${size}`)}
 		>
 			<div className="product-card__img">
-				{isDiscount && <span className="badge">{`${discountPercent} %`}</span>}
+				{isDiscount && <Badge>{`${discountPercent} %`}</Badge>}
 				<img src={imgUrl} alt={productName} />
 			</div>
 			<div className="product-card__content">
