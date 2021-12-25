@@ -114,9 +114,9 @@ export const productTags = [
 export const getProductList = (count = 10) => {
 	const listProduct = [];
 
-	for (let index = 0; index < count / 2; index++) {
+	for (let index = 1; index <= Math.ceil(count / 2); index++) {
 		const autoId = Math.floor(1000 + Math.random() * 9000);
-		const originalPrice = Math.floor(1000 + Math.random() * 9000);
+		const originalPrice = Math.floor(Math.random() * 500);
 		const stock = Math.random(Math.random() * 500);
 		const imgUrl = "https://picsum.photos/400";
 		listProduct.push({
@@ -157,8 +157,8 @@ export const getProductList = (count = 10) => {
 			imgUrl,
 		});
 	}
-	for (let index = count / 2; index < count; index++) {
-		const originalPrice = Math.floor(1000 + Math.random() * 9000).toFixed();
+	for (let index = Math.ceil(count / 2) + 1; index <= count; index++) {
+		const originalPrice = Math.floor(Math.random() * 500).toFixed();
 		const stock = Math.random(Math.random() * 500);
 		const autoId = Math.floor(1000 + Math.random() * 9000);
 		const discountedPrice = (Math.random() * originalPrice).toFixed(2);
@@ -201,6 +201,10 @@ export const getProductList = (count = 10) => {
 			imgUrl,
 		});
 	}
-
+	// console.log(
+	// 	"%c -------List Products was generated with mockjs / constant",
+	// 	"background: green; color: red"
+	// );
+	// console.log({ listProduct });
 	return listProduct;
 };

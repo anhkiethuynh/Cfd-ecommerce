@@ -1,7 +1,6 @@
 @import "assets/scss/_core";
 .testimonial {
 	// max-width: 470px;
-	margin: 50px auto;
 
 	border: 1px solid $secondary-color-adddional-light-f1;
 	border-radius: 12px;
@@ -9,6 +8,7 @@
 	font-family: ppm;
 	padding: 24px 32px 40px;
 	position: relative;
+	margin-bottom: 48px;
 	&__quote {
 		font-size: 15px;
 		line-height: 22px;
@@ -17,6 +17,7 @@
 		margin-top: 24px;
 		font-size: 12px;
 		line-height: 18px;
+		color: $secondary-color-lighter;
 	}
 	&__image {
 		--sz: 48px;

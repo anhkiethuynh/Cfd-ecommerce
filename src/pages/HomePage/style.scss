@@ -1,5 +1,13 @@
+@import "assets/scss/core";
 .homepage {
+	.headline-wrapper {
+		@include useFlex(spb, center);
+		line-height: 6px;
+		margin-bottom: 32px;
+	}
 	.categories-section {
-	
+		.product-card {
+			margin-bottom: 0;
+		}
 	}
 }

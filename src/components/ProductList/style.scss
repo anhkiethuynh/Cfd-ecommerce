@@ -5,7 +5,7 @@
 		--gap-bottom: 48px;
 		.inner {
 			display: flex;
-			justify-content: start;
+			justify-content: flex-start;
 			flex-wrap: wrap;
 			margin-left: calc(-1 * var(--gap-left));
 		}

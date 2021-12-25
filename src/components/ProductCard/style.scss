@@ -37,6 +37,7 @@
 			font-family: ppm;
 			font-size: 15px;
 			line-height: 22px;
+			@include setOverflow(1);
 		}
 		&-description {
 			@include setOverflow(1);

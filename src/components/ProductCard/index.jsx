@@ -90,9 +90,9 @@ function ProductCard({
 					<div className="product-description">{productDescription}</div>
 					{showRating && (
 						<div className="product-rating">
-							{[...Array(5)].map((_, index) => {
-								return <IconRating isRated={index < rating} />;
-							})}
+							{[...Array(5)].map((_, index) => (
+								<IconRating key={index} isRated={index < rating} />
+							))}
 						</div>
 					)}
 					{size === "large" && (

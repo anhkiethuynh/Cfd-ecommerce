@@ -14,7 +14,7 @@ function CategoriesSection({ listCategory, className, listProduct, children }) {
 					/>
 
 					<div className="content">
-						{listProduct?.length > 0 && listProduct.map((product) => null)}
+						{/* {listProduct?.length > 0 && listProduct.map((product) => Fra)} */}
 
 						{!listProduct?.length > 0 && children}
 					</div>
