@@ -4,6 +4,8 @@ import HomePage from "./pages/HomePage";
 import MainLayout from "./layout/MainLayout";
 import Form from "pages/Form";
 import { PageProvider } from "context/PageContext";
+import CheckoutPage from "pages/CheckoutPage";
+import { PATH } from "constant/routes";
 
 function App() {
 	return (
@@ -14,6 +16,11 @@ function App() {
 						<Route element={<MainLayout />}>
 							<Route index path="/" element={<HomePage />}></Route>
 							<Route index path="/form" element={<Form />}></Route>
+							<Route
+								index
+								path={PATH.CHECKOUT_PAGE}
+								element={<CheckoutPage />}
+							></Route>
 						</Route>
 					</Routes>
 				</PageProvider>

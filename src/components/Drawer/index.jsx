@@ -1,12 +1,15 @@
-import Modal from "components/Modal";
 import React from "react";
+import ReactDOM from "react-dom";
+
 import "./style.scss";
 
 function Drawer({ children, isOpen }) {
-	return (
+	return ReactDOM.createPortal(
 		<>
-			<Modal {...{ isOpen }}>{children}</Modal>
-		</>
+			{/* <div className="modal-backdrop" /> */}
+			<div>{children}</div>
+		</>,
+		document.getElementById("portalWrapper")
 	);
 }
 

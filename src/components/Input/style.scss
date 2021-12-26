@@ -2,6 +2,18 @@
 
 .input {
 	&-group {
+		label {
+			font-size: 12px;
+			font-family: ppb;
+			line-height: 1.5em;
+			margin-bottom: 0.5em;
+			display: block;
+		}
+		.error-message {
+			color: rgb(156, 4, 4);
+			margin: 15px 0;
+			font-size: 12px;
+		}
 	}
 	&-wrapper {
 		padding: 11px 16px 11px 21px;
@@ -44,8 +56,51 @@
 			}
 		}
 	}
-	p.error-message {
-		color: rgb(156, 4, 4);
-		margin: 15px 0;
+	&-radio {
+		--checkmark-size: 20px;
+		padding-left: calc(var(--checkmark-size) + 10px);
+		position: relative;
+		cursor: pointer;
+		-webkit-user-select: none;
+		-moz-user-select: none;
+		-ms-user-select: none;
+		user-select: none;
+		// &-wrapper {
+		// 	position: relative;
+		// }
+		.input-item {
+			position: absolute;
+			opacity: 0;
+			cursor: pointer;
+			height: 0;
+			width: 0;
+			&:checked ~ .checkmark {
+				background-color: $primary-color;
+				&:after {
+					display: block;
+				}
+			}
+		}
+		.checkmark {
+			position: absolute;
+			top: 0;
+			left: 0;
+			height: var(--checkmark-size);
+			width: var(--checkmark-size);
+			background-color: #fff;
+			border-radius: 50%;
+			&:after {
+				content: "";
+				position: absolute;
+				display: none;
+			}
+			&:after {
+				width: 50%;
+				height: 50%;
+				border-radius: 50%;
+				background-color: $white-color;
+				@include useCenter(false);
+			}
+		}
 	}
 }

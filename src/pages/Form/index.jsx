@@ -3,18 +3,9 @@ import Button from "components/Button";
 import { DropDownList } from "components/Input";
 import { InputText } from "components/Input";
 import Title from "components/Title";
+import { FORM } from "constant/form";
 import React, { useState } from "react";
 import "./style.scss";
-const VALIDATE_MESSAGE = {
-	IS_REQUIRE: "This field is required.",
-	PASSWORD:
-		"Password must be between 8 - 32 characters; includes numbers, uppercase, lowercase characters and special characters.",
-	FULL_NAME: "Fullname must be at least 2 characters.",
-	AGE: "You must be older than 18 years old.",
-	EMAIL: "Your email is invalid.",
-	PASSWORD_CONFIRM: "Confirm password does not match",
-	RULE: "You have to agree our services rules.",
-};
 
 const REGEX = {
 	EMAIL:
@@ -79,22 +70,22 @@ function Form() {
 		let error = {};
 		const keys = Object.keys(form);
 		keys.forEach((key) => {
-			if (!form[key]) error[key] = VALIDATE_MESSAGE.IS_REQUIRE;
+			if (!form[key]) error[key] = FORM.VALIDATE_MESSAGE.IS_REQUIRE;
 			else if (key === "userName" && !REGEX.EMAIL.test(form[key])) {
-				error = { ...error, [key]: VALIDATE_MESSAGE.EMAIL };
+				error = { ...error, [key]: FORM.VALIDATE_MESSAGE.EMAIL };
 			} else if (key === "password" && !REGEX.PASSWORD.test(form[key])) {
-				error = { ...error, [key]: VALIDATE_MESSAGE.PASSWORD };
+				error = { ...error, [key]: FORM.VALIDATE_MESSAGE.PASSWORD };
 			} else if (
 				key === "confirmPassword" &&
 				form.password !== form.confirmPassword
 			) {
-				error = { ...error, [key]: VALIDATE_MESSAGE.PASSWORD_CONFIRM };
+				error = { ...error, [key]: FORM.VALIDATE_MESSAGE.PASSWORD_CONFIRM };
 			} else if (key === "fullname" && !REGEX.FULLNAME.test(form[key])) {
-				error = { ...error, [key]: VALIDATE_MESSAGE.FULL_NAME };
+				error = { ...error, [key]: FORM.VALIDATE_MESSAGE.FULL_NAME };
 			} else if (key === "job" && !form["ortherJob"]) {
-				error = { ...error, ortherJob: VALIDATE_MESSAGE.IS_REQUIRE };
+				error = { ...error, ortherJob: FORM.VALIDATE_MESSAGE.IS_REQUIRE };
 			} else if (key === "age" && Number(form[key]) <= 18) {
-				error = { ...error, [key]: VALIDATE_MESSAGE.AGE };
+				error = { ...error, [key]: FORM.VALIDATE_MESSAGE.AGE };
 			}
 		});
 		if (Object.keys(error).length > 0) {

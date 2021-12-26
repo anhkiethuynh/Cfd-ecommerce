@@ -28,10 +28,8 @@ export function InputText({
 							`${iconType ? `input-icon-${iconType}` : ""}`,
 							className
 						)}
-						name={id}
+						{...{ type }}
 						{...rest}
-						{...{ type, id }}
-						value={value || ""}
 					/>
 					{iconType === "right" && (
 						<i className="input-icon--wrapper">{icon}</i>
@@ -71,5 +69,26 @@ export function DropDownList({
 				{errorMessage && <p className="error-message">{errorMessage || ""}</p>}
 			</div>
 		</>
+	);
+}
+
+export function SelectItem({
+	type = "radio",
+	children,
+	errorMessage,
+	...props
+}) {
+	console.log(errorMessage);
+	return (
+		<div className="input-group">
+			<label className="input-radio">
+				<div className="input-radio-wrapper">
+					<input className="input-item" type="radio" {...props} />
+					<span className="checkmark"></span>
+				</div>
+				{children}
+			</label>
+			{errorMessage && <p className="error-message">{errorMessage || ""}</p>}
+		</div>
 	);
 }

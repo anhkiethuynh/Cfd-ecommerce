@@ -1,0 +1,74 @@
+@import "assets/scss/core";
+.billing {
+	.checkout {
+		&-row {
+			@include useFlex(spb, center);
+			margin-bottom: 32px;
+			&:not(:first-child) {
+				margin-top: 64px;
+			}
+		}
+	}
+	&-title {
+		line-height: 33px;
+		margin-bottom: 4px;
+		& + p {
+			color: $secondary-color-lighter;
+		}
+	}
+	&-step {
+		font-size: 12px;
+		line-height: 16px;
+		color: $secondary-color-lighter;
+	}
+	.form {
+		&-wrapper {
+			display: flex;
+			flex-wrap: wrap;
+			margin-left: -30px;
+		}
+		.form-col {
+			width: calc(50% - 30px);
+			margin-left: 30px;
+			margin-bottom: 16px;
+		}
+	}
+	.method {
+		.input-group {
+			.input-radio {
+				padding: 15px 15px 15px 55px;
+				background-color: $secondary-color-adddional-light-f9;
+				border: 1px solid $secondary-color-adddional-light-d1;
+				border-radius: 12px;
+				overflow: hidden;
+
+				.checkmark {
+					border: 1px solid #d1d1d1;
+					top: 50%;
+					transform: translateY(-50%);
+					left: 15px;
+				}
+			}
+		}
+		&-wrap {
+			display: flex;
+			flex: 1;
+		}
+		&-name {
+			width: 30%;
+		}
+		&-price {
+			span {
+				&:first-child {
+					color: $primary-color;
+					margin-right: 12px;
+				}
+			}
+		}
+		&-logo {
+			flex: 1;
+			display: flex;
+			justify-content: flex-end;
+		}
+	}
+}
