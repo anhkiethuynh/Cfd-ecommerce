@@ -11,7 +11,7 @@ function ProductCard({
 	size = "small",
 	showRating = false,
 }) {
-	const handleAddtoWishList = () => {};
+	// const handleAddtoWishList = () => {};
 
 	const dataMappingFunction = (data) => {
 		const isDiscount = data?.isPromotion || false;
@@ -34,10 +34,12 @@ function ProductCard({
 		const productDescription =
 			data?.productDescription || "Product Description";
 		const autoId = data?.autoId;
-		const discountPercent = (
-			(data?.discountedPrice?.amount / data?.originalPrice?.amount) *
-			100
-		).toFixed(2);
+		const discountPercent =
+			100 -
+			(
+				(data?.discountedPrice?.amount / data?.originalPrice?.amount) *
+				100
+			).toFixed(2);
 		return {
 			isDiscount,
 			discountedPrice,
@@ -63,15 +65,15 @@ function ProductCard({
 		originalPrice,
 		rating,
 		isFreeShip,
-		shippingFee,
-		stock,
-		isInStock,
-		farm,
-		fresheness,
+		// shippingFee,
+		// stock,
+		// isInStock,
+		// farm,
+		// fresheness,
 		imgUrl,
 		productName,
 		productDescription,
-		autoId,
+		// autoId,
 		discountPercent,
 	} = dataMappingFunction(productData);
 

@@ -104,6 +104,6 @@
 }
 
 @mixin percentPaddingBottom($height: 1px, $width: 10px) {
-	$ratio: $height / $width;
+	$ratio: calc($height / $width);
 	padding-bottom: $ratio * 100%;
 }
