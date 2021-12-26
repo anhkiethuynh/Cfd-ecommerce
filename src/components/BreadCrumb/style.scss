@@ -1,0 +1,21 @@
+@import "assets/scss/core";
+.breadcrumb {
+	padding: 15px 0;
+	&-link {
+		font-weight: normal;
+		font-size: 13px;
+		line-height: 16px;
+		font-family: opsr;
+		color: $secondary-color-lighter;
+		&:not(:last-child) {
+			&::after {
+				content: "/";
+				display: inline;
+				margin: 0 8px;
+			}
+		}
+		&.active {
+			color: $text-color;
+		}
+	}
+}
